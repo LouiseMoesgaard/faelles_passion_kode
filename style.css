@@ -1,0 +1,72 @@
+    * {
+        margin: 0;
+        font-family: 'Lato', sans-serif;
+    }
+
+    img {
+        max-width: 100%;
+
+    }
+
+    body {
+        background-color: whitesmoke;
+    }
+
+    article {
+        padding: 10px;
+
+    }
+
+    .hide {
+        display: none;
+        pointer-events: none;
+    }
+
+
+    .data-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        margin: 0 auto;
+        padding: .5vw 1vw;
+        grid-gap: 30px;
+
+    }
+
+    .data-container img {
+        padding-bottom: 1vw;
+    }
+
+    .price {
+        padding-top: 1vw;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+
+    h2 {
+        font-size: 3.5rem;
+        text-align: center;
+        padding: 2.5vw 0;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        padding-bottom: 1vw;
+    }
+
+    .button {
+        padding: 15px 25px;
+        border: 1px solid black;
+        border-radius: 5px;
+        display: inline-block;
+        margin: 20px 3px 3px;
+        outline: none;
+        font-size: 0.9rem;
+
+
+    }
+
+    .button_active {
+        background-color: black;
+        color: white;
+    }
