@@ -53,11 +53,18 @@
         margin: 20px 3px 3px;
         outline: none;
         font-size: 0.9rem;
+        background: none;
+        border: none;
+    }
+
+    .button img {
+        width: 9vw;
+
     }
 
     .button_active {
         background-color: black;
-        color: white;
+        color: white
     }
 
     .description {
