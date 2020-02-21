@@ -17,31 +17,11 @@
 
     }
 
+
     .hide {
         display: none;
         pointer-events: none;
     }
-
-
-    .data-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-        margin: 0 auto;
-        padding: .5vw 1vw;
-        grid-gap: 30px;
-
-    }
-
-    .data-container img {
-        padding-bottom: 1vw;
-    }
-
-    .price {
-        padding-top: 1vw;
-        font-size: 1.2rem;
-        font-weight: bold;
-    }
-
 
     h2 {
         font-size: 3.5rem;
@@ -54,6 +34,18 @@
         padding-bottom: 1vw;
     }
 
+    /* Styling til navigation */
+    nav {
+        text-align: center;
+        margin-bottom: 15px;
+
+    }
+
+
+
+    /* Styling til filtrerings menu */
+
+
     .button {
         padding: 15px 25px;
         border: 1px solid black;
@@ -62,11 +54,87 @@
         margin: 20px 3px 3px;
         outline: none;
         font-size: 0.9rem;
-
-
     }
 
     .button_active {
         background-color: black;
         color: white;
+    }
+
+    .description {
+        display: none;
+    }
+
+    /* styling til filtrering i menu.html */
+
+    .data-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        margin: 0 auto;
+        padding: .5vw 1vw;
+        grid-gap: 30px;
+
+    }
+
+    .data-container img {
+        padding-bottom: 1vw;
+    }
+
+    /*styling til popup menu  */
+
+    #popUp {
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, .5);
+        overflow: scroll;
+
+    }
+
+    .retterPopUp {
+        margin: 3em;
+        padding: 2em;
+        background-color: white;
+        border-radius: 5px;
+    }
+
+    #popUp img {
+        width: 60vw;
+        margin: 0 auto;
+        display: block;
+        padding-bottom: 1vw;
+    }
+
+    #popUp h3 {
+        text-align: center;
+    }
+
+    #popUp p {
+        text-align: center;
+    }
+
+    #popUp div {
+        border: 1px solid black;
+        background-color: white;
+        padding: .5vw;
+        width: 3vw;
+        text-align: center;
+        cursor: pointer;
+        display: inline-block;
+        float: right;
+        border-radius: 5px;
+    }
+
+    /* mediaquery til webversion */
+
+    @media only screen and (min-width: 600px) {
+        .description {
+            display: block;
+        }
+
+        .data-container {
+            /*            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));  skal styles med ENDNU MERE GRID*/
+
+        }
     }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="da">
 
 <head>
     <meta charset="utf-8">
@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <nav class="nav_oversigt">
+    <div class="nav_oversigt">
         <button data-filter="all" class="button button_active">
             Alle
         </button>
@@ -28,20 +28,31 @@
         <button data-filter="sashimi" class="button">
             Sashimi
         </button>
-    </nav>
+    </div>
 
     <h2>Alle</h2>
 
     <section class="data-container"></section>
+
     <template>
         <article class="oversigt">
-            <h3></h3>
             <img src="" alt="">
-            <p class="id"> </p>
+            <h3></h3>
             <p class="description"> </p>
-            /* Læs mere colapse button skal tilføjes */
+            <p class="id"></p>
+            <div>LÆS MERE</div>
         </article>
     </template>
+
+    <section id="popUp" class="hide">
+        <article class="retterPopUp">
+            <div>X</div>
+            <h3></h3>
+            <img src="" alt="">
+            <p class="description"> </p>
+            <p class="id"> </p>
+        </article>
+    </section>
 
     <main></main>
 
