@@ -17,10 +17,70 @@
 
     }
 
+
+    .hide {
+        display: none;
+        pointer-events: none;
+    }
+
+    h2 {
+        font-size: 3.5rem;
+        text-align: center;
+        padding: 2.5vw 0;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        padding-bottom: 1vw;
+    }
+
+    /* Styling til navigation */
+    nav {
+        text-align: center;
+        margin-bottom: 15px;
+
+    }
+
+
+
+    /* Styling til filtrerings menu */
+
+
+    .button {
+        padding: 15px 25px;
+        border: 1px solid black;
+        border-radius: 5px;
+        display: inline-block;
+        margin: 20px 3px 3px;
+        outline: none;
+        font-size: 0.9rem;
+    }
+
+    .button_active {
+        background-color: black;
+        color: white;
+    }
+
     .description {
         display: none;
     }
 
+    /* styling til filtrering i menu.html */
+
+    .data-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        margin: 0 auto;
+        padding: .5vw 1vw;
+        grid-gap: 30px;
+
+    }
+
+    .data-container img {
+        padding-bottom: 1vw;
+    }
+
+    /*styling til popup menu  */
 
     #popUp {
         position: fixed;
@@ -39,8 +99,7 @@
         border-radius: 5px;
     }
 
-    #popUp img,
-    #detail img {
+    #popUp img {
         width: 60vw;
         margin: 0 auto;
         display: block;
@@ -55,85 +114,7 @@
         text-align: center;
     }
 
-    #detail {
-        width: 60vw;
-        margin: 0 auto;
-        display: block;
-    }
-
-    #detail h3 {
-        text-align: center;
-    }
-
-    #detail p {
-        text-align: center;
-    }
-
-
-    .hide {
-        display: none;
-        pointer-events: none;
-    }
-
-
-    .data-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-        margin: 0 auto;
-        padding: .5vw 1vw;
-        grid-gap: 30px;
-
-    }
-
-
-    .data-container img {
-        padding-bottom: 1vw;
-    }
-
-    .price {
-        padding-top: 1vw;
-        font-size: 1.2rem;
-        font-weight: bold;
-    }
-
-
-    h2 {
-        font-size: 3.5rem;
-        text-align: center;
-        padding: 2.5vw 0;
-    }
-
-    h3 {
-        font-size: 1.5rem;
-        padding-bottom: 1vw;
-    }
-
-
-    nav {
-        text-align: center;
-        margin-bottom: 15px;
-
-    }
-
-    .button {
-        padding: 15px 25px;
-        border: 1px solid black;
-        border-radius: 5px;
-        display: inline-block;
-        margin: 20px 3px 3px;
-        outline: none;
-        font-size: 0.9rem;
-
-
-    }
-
-    .button_active {
-        background-color: black;
-        color: white;
-    }
-
-    #popUp div,
-    #detail div {
+    #popUp div {
         border: 1px solid black;
         background-color: white;
         padding: .5vw;
@@ -143,15 +124,9 @@
         display: inline-block;
         float: right;
         border-radius: 5px;
-
-
     }
 
-    #detail div {
-        position: absolute;
-        right: 1vw;
-    }
-
+    /* mediaquery til webversion */
 
     @media only screen and (min-width: 600px) {
         .description {
@@ -160,7 +135,6 @@
 
         .data-container {
             /*            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));  skal styles med ENDNU MERE GRID*/
-
 
         }
     }
