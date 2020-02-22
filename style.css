@@ -19,8 +19,8 @@
 
 
     .hide {
-        display: none;
-        pointer-events: none;
+        display: none !important;
+        pointer-events: none !important;
     }
 
     h2 {
@@ -45,6 +45,31 @@
 
     /* Styling til filtrerings menu */
 
+    .dropdown_button {
+        border: 1px solid black;
+        height: 10vw;
+        width: 50vw;
+        margin: 0 auto;
+        background-color: white;
+        padding: 5px 0;
+        z-index: 20;
+        position: relative;
+    }
+
+    .dropdown_button span.fa {
+        position: absolute;
+        right: 10px;
+        top: 2vw;
+    }
+
+    .dropdown_list {
+        border: 1px solid black;
+        width: 50vw;
+        left: 24.8vw;
+        position: absolute;
+        z-index: 20;
+        background-color: white;
+    }
 
     .button {
         padding: 15px 25px;
@@ -57,10 +82,26 @@
         border: none;
     }
 
-    .button img {
+    .button span,
+    .selected_item span {
+        height: 9vw;
+        line-height: 9vw;
+        vertical-align: bottom;
+        display: inline-block;
+        margin-left: 2vw;
+    }
+
+    .button img,
+    .selected_item img {
         width: 9vw;
 
     }
+
+    .selected_item img {
+        margin-left: 28px;
+    }
+
+
 
     .button_active {
         background-color: black;

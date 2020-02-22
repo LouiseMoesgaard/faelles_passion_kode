@@ -1,7 +1,8 @@
       const endpoint = ("https://spreadsheets.google.com/feeds/list/1EPQEGSn4g9fSiCGiW62cp3_moiUAF533HuA7MhzKYCA/od6/public/values?alt=json");
 
       let menuData = [];
-      let filter = "all";
+      let filter = "hosomaki";
+      handleDropdown(document.querySelector(".button:first-child"))
       const detalje = document.querySelector("#popUp");
 
       document.addEventListener("DOMContentLoaded", start);
@@ -54,11 +55,11 @@
       function showDetails(food) {
           console.log(`showDetails`);
 
-          detalje.classList.remove("hide");
           detalje.querySelector("div").addEventListener("click", () => detalje.classList.add("hide"));
           detalje.querySelector("h3").textContent = food.gsx$name.$t;
           detalje.querySelector(".description").textContent = food.gsx$description.$t;
           detalje.querySelector("img").src = `imgs/square/${food.gsx$pictures.$t}.jpg`;
+          detalje.classList.remove("hide");
       }
 
 
@@ -80,4 +81,26 @@
 
           document.querySelector("h2").textContent = this.textContent;
 
+          handleDropdown(this);
+
+      }
+
+
+      /* dropdown menu i mobilversion*/
+
+      document.querySelector(".dropdown_button").addEventListener("click", () => {
+          document.querySelector(".dropdown_list").classList.toggle("hide");
+
+      });
+
+      function handleDropdown(target) {
+          let dropdown_btn = document.querySelector(".dropdown_button .selected_item");
+          let buttons = document.querySelectorAll(".button").forEach(elm => {
+              elm.classList.remove("hide");
+          })
+          dropdown_btn.innerHTML = "";
+          let klon = target.cloneNode(true).innerHTML;
+          target.classList.add("hide");
+          dropdown_btn.innerHTML = klon;
+          document.querySelector(".dropdown_list").classList.toggle("hide");
       }
