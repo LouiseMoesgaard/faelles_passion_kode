@@ -5,7 +5,7 @@
       const detalje = document.querySelector("#popUp");
 
       if (window.innerWidth <= 600) {
-          handleDropdown(document.querySelector(".button[:first-child]"))
+          handleDropdown(document.querySelector(".button:first-child"))
       }
       if (window.innerWidth >= 600) {
           document.querySelector(".dropdown_list").classList.remove("hide");
