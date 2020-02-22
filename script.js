@@ -2,8 +2,25 @@
 
       let menuData = [];
       let filter = "hosomaki";
-      handleDropdown(document.querySelector(".button:first-child"))
       const detalje = document.querySelector("#popUp");
+
+      if (window.innerWidth <= 600) {
+          handleDropdown(document.querySelector(".button[:first-child]"))
+      }
+      if (window.innerWidth >= 600) {
+          document.querySelector(".dropdown_list").classList.remove("hide");
+      }
+      window.addEventListener("resize", () => {
+          if (window.innerWidth <= 600) {
+              handleDropdown(document.querySelector(`.button[data-filter="${filter}"]`));
+          }
+          if (window.innerWidth >= 600) {
+              document.querySelector(".dropdown_list").classList.remove("hide");
+              document.querySelectorAll(".button").forEach(elm => {
+                  elm.classList.remove("hide");
+              })
+          }
+      })
 
       document.addEventListener("DOMContentLoaded", start);
 

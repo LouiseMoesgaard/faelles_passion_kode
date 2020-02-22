@@ -184,4 +184,29 @@
             /*            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));  skal styles med ENDNU MERE GRID*/
 
         }
+
+        .dropdown_button {
+            display: none;
+        }
+
+        .dropdown_list {
+            border: none;
+            width: 75vw;
+            left: none;
+            margin: 0 auto;
+            position: static;
+            z-index: initial;
+            background-color: transparent;
+        }
+
+        .button span {
+            height: 5vw;
+            line-height: 5vw;
+            margin-left: 1vw;
+        }
+
+        .button img {
+            width: 5vw;
+
+        }
     }
