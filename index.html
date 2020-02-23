@@ -7,94 +7,6 @@
     <title>Forside</title>
     <link rel="stylesheet" href="style.css">
 
-
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            /*            overflow-x: hidden;*/
-        }
-
-
-
-        #navbar {
-            background-image: url(imgs/navbar_v2.svg);
-            position: fixed;
-            top: -50px;
-            width: 26%;
-            height: 6.5vw;
-            display: block;
-            transition: top 0.3s;
-            font-weight: bold;
-        }
-
-        .navbar_left {
-            display: flex;
-            justify-content: flex-end;
-            margin-left: 10vw;
-        }
-
-        #navbar a {
-            float: left;
-            display: block;
-            color: #f2f2f2;
-            padding: 15px;
-            text-decoration: none;
-            font-size: 17px;
-        }
-
-        #navbar a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-
-
-        nav {
-            margin-top: 20px;
-            margin-bottom: 15px;
-            text-align: center;
-        }
-
-
-        #landingpage img {
-            width: 100%;
-        }
-
-        #frontpage_content img {
-            width: 100%;
-        }
-
-
-        footer {
-            width: 100vw;
-            z-index: 1;
-            text-align: center;
-            position: relative;
-            display: flex;
-            align-items: flex-end;
-
-        }
-
-        .footer_links {
-            position: absolute;
-            top: 0;
-            width: 100vw;
-        }
-
-        /*DESKTOP MEDIA QUERY*/
-
-        @media only screen and (min-width: 768px) {
-
-            #navbar {
-                background-image: url(imgs/navbar_v2.svg);
-                position: fixed;
-                top: -50px;
-                width: 100%;
-                height: 6.4vw;
-            }
-        }
-
-    </style>
 </head>
 
 <body>
@@ -102,8 +14,8 @@
 
     <div id="navbar">
 
-        <div>
-            <a href="index.html"> <img src="imgs/" alt="logo"></a>
+        <div class="logo">
+            <a href="index.html"> Samshini</a>
         </div>
         <div class="navbar_left">
             <a href="menu.html">Sushi</a>
@@ -138,11 +50,9 @@
 
         <section class="sectionwrapper">
 
-            <img src="imgs/footer_bar.svg" alt="FIIIIINT">
-
             <div class="logo_footer">
 
-                <img src="" alt="">
+                <img src="imgs/logo.svg" alt="logo">
             </div>
 
             <div class="footer_links">
@@ -165,25 +75,5 @@
         </section>
 
     </footer>
-
-
-    <script>
-        document.addEventListener("DOMContentLoaded", scrollFunction);
-
-        // når brugeren scroller 20px ned kommer navbar frem
-        window.onscroll = function() {
-            scrollFunction()
-        };
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                document.getElementById("navbar").style.top = "0";
-            } else {
-                document.getElementById("navbar").style.top = "-50px";
-            }
-        }
-
-    </script>
-</body>
-
-</html>
+    <script src="script.js"></script>
+</body></html>

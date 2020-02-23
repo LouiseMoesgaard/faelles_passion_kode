@@ -6,6 +6,14 @@
 
       if (window.innerWidth <= 600) {
           handleDropdown(document.querySelector(".button:first-child"))
+          /* dropdown menu i mobilversion*/
+          let dropdown = document.querySelector(".dropdown_button");
+          if (dropdown) {
+              dropdown.addEventListener("click", () => {
+                  document.querySelector(".dropdown_list").classList.toggle("hide");
+
+              });
+          }
       }
       if (window.innerWidth >= 600) {
           document.querySelector(".dropdown_list").classList.remove("hide");
@@ -42,42 +50,45 @@
           const container = document.querySelector(".data-container");
           const oversigtTemplate = document.querySelector("template");
 
-          container.innerHTML = ""; //sletter alle klonede dom elemener i container-elementer (for at skjule tidligere filtrede data i HTML)
+          if (container) {
 
-          let filteredMenu = null; //filteredMenu sættes til ingenting, for at nulstille den filtrede dat efter hvert clickevent.
+              container.innerHTML = ""; //sletter alle klonede dom elemener i container-elementer (for at skjule tidligere filtrede data i HTML)
+
+              let filteredMenu = null; //filteredMenu sættes til ingenting, for at nulstille den filtrede dat efter hvert clickevent.
 
 
-          if (filter == "all") {
-              filteredMenu = menuData.feed.entry;
-          } else {
-              filteredMenu = menuData.feed.entry.filter(elm => {
-                  return elm.gsx$categori.$t == filter; //filtrerer alle elementer væk, som ikke overholder det boolske udtryk.
+              if (filter == "all") {
+                  filteredMenu = menuData.feed.entry;
+              } else {
+                  filteredMenu = menuData.feed.entry.filter(elm => {
+                      return elm.gsx$categori.$t == filter; //filtrerer alle elementer væk, som ikke overholder det boolske udtryk.
 
-              });
-          }
+                  });
+              }
 
-          filteredMenu.forEach(food => {
-              let klon = oversigtTemplate.cloneNode(true).content; //kloner dom-element.
-              klon.querySelector("h3").textContent = food.gsx$name.$t;
-              klon.querySelector(".description").textContent = food.gsx$description.$t;
-              klon.querySelector("img").src = `imgs/round/${food.gsx$pictures.$t}.png`;
-              klon.querySelector("img").addEventListener("click", () => {
-                  showDetails(food);
-              });
-              klon.querySelector(".desktop").addEventListener("click", (event) => {
-                  event.target.previousElementSibling.classList.toggle("expand");
-                  if (event.target.previousElementSibling.classList.contains("expand")) {
-                      event.target.innerHTML = "LÆS MINDRE";
-                  } else {
-                      event.target.innerHTML = "LÆS MERE";
-                  }
+              filteredMenu.forEach(food => {
+                  let klon = oversigtTemplate.cloneNode(true).content; //kloner dom-element.
+                  klon.querySelector("h3").textContent = food.gsx$name.$t;
+                  klon.querySelector(".description").textContent = food.gsx$description.$t;
+                  klon.querySelector("img").src = `imgs/round/${food.gsx$pictures.$t}.png`;
+                  klon.querySelector("img").addEventListener("click", () => {
+                      showDetails(food);
+                  });
+                  klon.querySelector(".desktop").addEventListener("click", (event) => {
+                      event.target.previousElementSibling.classList.toggle("expand");
+                      if (event.target.previousElementSibling.classList.contains("expand")) {
+                          event.target.innerHTML = "LÆS MINDRE";
+                      } else {
+                          event.target.innerHTML = "LÆS MERE";
+                      }
+                  })
+                  klon.querySelector(".mobile").addEventListener("click", () => {
+                      showDetails(food);
+                  });
+                  container.appendChild(klon); //klonede domelement sættes ind i HTML-dom.
+
               })
-              klon.querySelector(".mobile").addEventListener("click", () => {
-                  showDetails(food);
-              });
-              container.appendChild(klon); //klonede domelement sættes ind i HTML-dom.
-
-          })
+          }
 
       }
 
@@ -117,21 +128,17 @@
       }
 
 
-      /* dropdown menu i mobilversion*/
-
-      document.querySelector(".dropdown_button").addEventListener("click", () => {
-          document.querySelector(".dropdown_list").classList.toggle("hide");
-
-      });
 
       function handleDropdown(target) {
           let dropdown_btn = document.querySelector(".dropdown_button .selected_item");
           let buttons = document.querySelectorAll(".button").forEach(elm => {
               elm.classList.remove("hide");
           })
-          dropdown_btn.innerHTML = "";
-          let klon = target.cloneNode(true).innerHTML;
-          target.classList.add("hide");
-          dropdown_btn.innerHTML = klon;
-          document.querySelector(".dropdown_list").classList.toggle("hide");
+          if (dropdown_btn) {
+              dropdown_btn.innerHTML = "";
+              let klon = target.cloneNode(true).innerHTML;
+              target.classList.add("hide");
+              dropdown_btn.innerHTML = klon;
+              document.querySelector(".dropdown_list").classList.toggle("hide");
+          }
       }
