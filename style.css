@@ -50,7 +50,8 @@
     /* Styling til filtrerings menu */
 
     .dropdown_button {
-        border: 1px solid black;
+        border: 1px solid #DEDEDE;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.16);
         height: 10vw;
         width: 50vw;
         margin: 0 auto;
@@ -67,10 +68,12 @@
     }
 
     .dropdown_list {
-        border: 1px solid black;
+        border: 1px solid #DEDEDE;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.16);
         width: 50vw;
         left: 24.8vw;
         position: absolute;
+        margin-top: 3px;
         z-index: 20;
         background-color: white;
     }
@@ -202,11 +205,35 @@
         cursor: pointer;
     }
 
+    #frontpage_content .text_info {
+        padding: 2em;
+    }
+
+    #frontpage_content a {
+        text-align: center;
+        color: black;
+        font-size: 1.5rem;
+        padding: 0.2em;
+    }
+
+    #frontpage_content a:hover {
+        color: #E8868F
+    }
+
 
 
     /* mediaquery til webversion */
 
     @media only screen and (min-width: 600px) {
+
+        /*
+        section {
+            max-width: 1200px;
+        }
+*/
+
+
+
         .oversigt .description {
             display: block;
         }
@@ -221,19 +248,51 @@
 
         }
 
+        .sushi_kategorier {
+            display: flex;
+            flex-direction: column;
+        }
+
         .dropdown_button {
             display: none;
         }
 
         .dropdown_list {
             border: none;
-            width: 75vw;
-            left: none;
+            box-shadow: none;
             margin: 0 auto;
             position: static;
             z-index: initial;
             background-color: transparent;
+
         }
+
+        .header_buttons {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+
+        }
+
+
+        .header_buttons .button {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .header_buttons img {
+            width: 5vw;
+            filter: grayscale(100%);
+        }
+
+        .header_buttons .button img:hover {
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.16);
+            filter: grayscale(0%);
+        }
+
+
 
         .button span {
             height: 5vw;
@@ -290,5 +349,58 @@
         .oversigt:nth-child(2n) .textWrapper {
             justify-self: left;
         }
+
+
+        #frontpage_content .text_info {
+            margin-left: 15em;
+            margin-right: 15em;
+        }
+
+
+        #popUp {
+            background-color: rgba(0, 0, 0, 0.44);
+            max-width: none;
+
+
+        }
+
+        .retterPopUp {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            max-width: 1000px;
+            margin: auto;
+            margin-top: 3em;
+
+
+
+
+            /*
+
+            margin: 0auto;
+            justify-content: center;
+*/
+
+        }
+
+        #popUp img {
+            margin: 0 auto;
+            padding-top: 1em;
+            display: block;
+            padding-bottom: 1vw;
+
+        }
+
+
+        #popUp .x_button {
+
+            top: 5vw;
+            left: 3vw;
+
+            cursor: pointer;
+        }
+
 
     }
