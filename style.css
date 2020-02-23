@@ -34,6 +34,10 @@
         padding-bottom: 1vw;
     }
 
+    .expand {
+        height: auto !important;
+    }
+
     /* Styling til navigation */
     nav {
         text-align: center;
@@ -108,7 +112,17 @@
         color: white
     }
 
-    .description {
+    .oversigt .description {
+        display: none;
+        height: 9vw;
+        overflow: hidden;
+    }
+
+    .retterPopUp .description {
+        display: block;
+    }
+
+    .desktop {
         display: none;
     }
 
@@ -176,12 +190,17 @@
     /* mediaquery til webversion */
 
     @media only screen and (min-width: 600px) {
-        .description {
+        .oversigt .description {
             display: block;
         }
 
+        .retterPopUp .description {
+            display: none;
+        }
+
         .data-container {
-            /*            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));  skal styles med ENDNU MERE GRID*/
+            grid-template-columns: 100%;
+            grid-auto-flow: dense;
 
         }
 
@@ -209,4 +228,50 @@
             width: 5vw;
 
         }
+
+        .oversigt {
+            padding: 8vw;
+            display: grid;
+            grid-template-areas:
+                "header header header header"
+                "main main main main";
+        }
+
+        .oversigt h3 {
+            grid-area: header;
+
+
+
+        }
+
+        .oversigt img {
+            grid-area: main;
+            justify-self: left;
+            width: 40%;
+        }
+
+        .oversigt .textWrapper {
+            grid-area: main;
+            justify-self: right;
+            width: 50%;
+            padding-top: 10vw;
+            font-size: 1.5vw;
+        }
+
+        .desktop {
+            display: block;
+        }
+
+        .mobile {
+            display: none;
+        }
+
+        .oversigt:nth-child(2n) img {
+            justify-self: right;
+        }
+
+        .oversigt:nth-child(2n) .textWrapper {
+            justify-self: left;
+        }
+
     }

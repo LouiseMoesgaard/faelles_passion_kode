@@ -61,10 +61,22 @@
               klon.querySelector("h3").textContent = food.gsx$name.$t;
               klon.querySelector(".description").textContent = food.gsx$description.$t;
               klon.querySelector("img").src = `imgs/round/${food.gsx$pictures.$t}.png`;
-              klon.querySelector("article").addEventListener("click", () => {
+              klon.querySelector("img").addEventListener("click", () => {
+                  showDetails(food);
+              });
+              klon.querySelector(".desktop").addEventListener("click", (event) => {
+                  event.target.previousElementSibling.classList.toggle("expand");
+                  if (event.target.previousElementSibling.classList.contains("expand")) {
+                      event.target.innerHTML = "LÆS MINDRE";
+                  } else {
+                      event.target.innerHTML = "LÆS MERE";
+                  }
+              })
+              klon.querySelector(".mobile").addEventListener("click", () => {
                   showDetails(food);
               });
               container.appendChild(klon); //klonede domelement sættes ind i HTML-dom.
+
           })
 
       }
@@ -98,7 +110,9 @@
 
           document.querySelector("h2").textContent = this.textContent;
 
-          handleDropdown(this);
+          if (window.innerWidth <= 600) {
+              handleDropdown(this)
+          }
 
       }
 
