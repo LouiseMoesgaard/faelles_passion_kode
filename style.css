@@ -407,6 +407,7 @@
         .button {
             margin: auto;
             padding: none;
+
         }
 
         .button span {
@@ -414,6 +415,7 @@
             padding: 0;
             margin-top: 0;
             font-size: 1.2rem;
+            width: 8vw;
         }
 
         .button img {
@@ -422,7 +424,8 @@
         }
 
         .oversigt {
-/*            padding: 8vw;*/
+            padding-left: 8vw;
+            padding-right: 8vw;
             display: grid;
             grid-template-areas:
                 "header header header header"
