@@ -166,22 +166,18 @@
 
 
     .button {
-        display: flex;
-        flex-direction: column;
-
-        /*
         padding: 15px 25px;
         border-radius: 5px;
-        display: inline-block;
         margin: 20px 3px 3px;
-*/
+
+        display: inline-block;
         outline: none;
         font-size: 0.9rem;
         background: none;
         border: none;
     }
 
-    /*
+
     .button span,
     .selected_item span {
         height: 9vw;
@@ -190,15 +186,15 @@
         display: inline-block;
         margin-left: 2vw;
     }
-*/
 
-    /*
+
+
     .button img,
     .selected_item img {
         width: 9vw;
 
     }
-*/
+
 
     .selected_item img {
         margin-left: 28px;
@@ -206,11 +202,13 @@
 
 
 
-    .button_active .button img {
-        /*        background-color: black;*/
-        /*        color: black;*/
-        filter: opacity(100%);
+    /*
+    .button_active {
+        background-color: black;
+        color: black;
+
     }
+*/
 
     .oversigt .description {
         display: none;
@@ -327,6 +325,7 @@
 
     @media only screen and (min-width: 600px) {
 
+
         /*
         section {
             max-width: 1200px;
@@ -391,21 +390,39 @@
             filter: opacity(100%);
         }
 
+        .button_active img {
+            filter: opacity(100%);
+        }
+
 
 
         .button span {
             /*            height: 5vw;*/
+            /*
             line-height: 1vw;
             margin-left: 1vw;
+*/
+        }
+
+        .button {
+            margin: auto;
+            padding: none;
+        }
+
+        .button span {
+            margin: auto;
+            padding: 0;
+            margin-top: 0;
+            font-size: 1.2rem;
         }
 
         .button img {
-            width: 5vw;
+            width: 9vw;
 
         }
 
         .oversigt {
-            padding: 8vw;
+/*            padding: 8vw;*/
             display: grid;
             grid-template-areas:
                 "header header header header"
