@@ -50,7 +50,7 @@
 
     /* styling af layout */
     #navbar {
-        background-image: url(imgs/navbar_v2.svg);
+        background-image: url(imgs/navbar_mobile.svg);
         background-size: 100%;
         background-repeat: no-repeat;
         position: fixed;
