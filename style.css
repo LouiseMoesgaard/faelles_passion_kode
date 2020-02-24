@@ -106,29 +106,28 @@
 
     footer {
         width: 100%;
-        bottom: 0;
+        height: 50vh;
         background-image: url(imgs/footer_baggrund.png);
         background-size: 100%;
         background-repeat: no-repeat;
         z-index: 9000;
         text-align: center;
         position: relative;
-
-
     }
 
     footer .sectionwrapper {
         display: flex;
+        margin: 10vw;
     }
 
     .footer_links,
     .logo_footer {
-        flex-basis: 300px;
+        flex-basis: 350px;
+
     }
 
     .logo_footer img {
-
-        width: 10vw;
+        width: 5vw;
     }
 
     .footer_links a {
@@ -439,7 +438,7 @@
         }
 
         .oversigt {
-/*            padding: 8vw;*/
+            /*            padding: 8vw;*/
             display: grid;
             grid-template-areas:
                 "header header header header"
