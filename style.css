@@ -1,6 +1,7 @@
     * {
         margin: 0;
-        font-family: 'Lato', sans-serif;
+        /*        font-family: 'Lato',
+sans-serif;*/
     }
 
     img {
@@ -25,16 +26,33 @@
         pointer-events: none !important;
     }
 
+    /*
+font-family: 'Nanum Brush Script', ;
+font-family: 'Noto Sans JP', ;
+*/
+
     h2 {
         font-size: 3.5rem;
         text-align: center;
         padding: 2.5vw 0;
+        font-family: 'Nanum Brush Script';
     }
 
     h3 {
         font-size: 1.5rem;
         padding-bottom: 1vw;
+        font-family: 'Nanum Brush Script';
     }
+
+    span {
+        font-family: 'Noto Sans JP';
+    }
+
+    p {
+        font-family: 'Noto Sans JP';
+    }
+
+
 
     .expand {
         height: auto !important;
