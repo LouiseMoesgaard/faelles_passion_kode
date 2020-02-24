@@ -34,7 +34,7 @@ font-family: 'Noto Sans JP', ;
     h2 {
         font-size: 3.5rem;
         text-align: center;
-        padding: 2.5vw 0;
+        padding: 2.5vw;
         font-family: 'Nanum Brush Script';
     }
 
@@ -246,8 +246,6 @@ font-family: 'Noto Sans JP', ;
 
     .button span,
     .selected_item span {
-        height: 9vw;
-        line-height: 9vw;
         vertical-align: bottom;
         display: inline-block;
         margin-left: 2vw;
@@ -288,6 +286,10 @@ font-family: 'Noto Sans JP', ;
 
     .desktop {
         display: none;
+        font-family: 'Noto Sans JP';
+        font-size: 1rem;
+        text-decoration: underline;
+
     }
 
     /* styling til filtrering i menu.html */
@@ -397,11 +399,6 @@ font-family: 'Noto Sans JP', ;
             height: 7vw;
         }
 
-        .button span {
-
-            font-size: 2rem;
-        }
-
         h2 {
             font-size: 4rem;
         }
@@ -460,8 +457,6 @@ font-family: 'Noto Sans JP', ;
             display: flex;
             flex-direction: row;
             justify-content: center;
-
-
         }
 
 
@@ -485,15 +480,6 @@ font-family: 'Noto Sans JP', ;
         }
 
 
-
-        .button span {
-            /*            height: 5vw;*/
-            /*
-            line-height: 1vw;
-            margin-left: 1vw;
-*/
-        }
-
         .button {
             margin: auto;
             padding: none;
@@ -504,8 +490,8 @@ font-family: 'Noto Sans JP', ;
             margin: auto;
             padding: 0;
             margin-top: 0;
-            /*            font-size: 1.2rem;*/
             width: 8vw;
+            font-size: 2rem;
         }
 
         .button img {

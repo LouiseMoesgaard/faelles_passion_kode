@@ -5,21 +5,34 @@
       const detalje = document.querySelector("#popUp");
 
       if (window.innerWidth <= 600) {
+          document.querySelector(".dropdown_list").classList.remove("hide");
           handleDropdown(document.querySelector(".button:first-child"))
           /* dropdown menu i mobilversion*/
           let dropdown = document.querySelector(".dropdown_button");
           if (dropdown) {
               dropdown.addEventListener("click", () => {
                   document.querySelector(".dropdown_list").classList.toggle("hide");
+                  let arrow = document.querySelector(".dropdown_button > span");
+                  if (arrow.classList.contains("fa-angle-down")) {
+                      arrow.classList.remove("fa-angle-down");
+                      arrow.classList.add("fa-angle-up");
+                  } else {
+                      arrow.classList.add("fa-angle-down");
+                      arrow.classList.remove("fa-angle-up");
+
+                  }
+
 
               });
           }
       }
       if (window.innerWidth >= 600) {
+          console.log("dekstop");
           document.querySelector(".dropdown_list").classList.remove("hide");
       }
       window.addEventListener("resize", () => {
           if (window.innerWidth <= 600) {
+              document.querySelector(".dropdown_list").classList.remove("hide");
               handleDropdown(document.querySelector(`.button[data-filter="${filter}"]`));
           }
           if (window.innerWidth >= 600) {
