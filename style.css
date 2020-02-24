@@ -56,12 +56,13 @@
         position: fixed;
         top: 0px;
         width: 100%;
-        height: 9.5vw;
+        height: 100%;
         display: block;
         transition: top 0.3s;
         font-weight: bold;
         z-index: 9000;
     }
+
 
     .navbar_left {
         position: absolute;
@@ -342,6 +343,12 @@
     @media only screen and (min-width: 600px) {
 
 
+        #navbar {
+            background-image: url(imgs/navbar_v2.svg)
+        }
+
+
+
         /*
         section {
             max-width: 1200px;
@@ -440,12 +447,10 @@
         }
 
         .oversigt {
-<<<<<<< HEAD
+
             /*            padding: 8vw;*/
-=======
             padding-left: 8vw;
             padding-right: 8vw;
->>>>>>> faelles_passion_kode/master
             display: grid;
             grid-template-areas:
                 "header header header header"
