@@ -78,7 +78,7 @@
 
     .logo,
     .navbar_left {
-        display: inline-block
+        display: inline-block;
     }
 
     .logo a {
@@ -105,12 +105,15 @@
 
 
     footer {
-        width: 100vw;
-        background-image: url(imgs/footer_bar.svg);
+        width: 100%;
+        bottom: 0;
+        background-image: url(imgs/footer_baggrund.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
         z-index: 9000;
         text-align: center;
         position: relative;
-        background-size: 100%;
+
 
     }
 
@@ -118,17 +121,31 @@
         display: flex;
     }
 
-    .footer_links {
+    .footer_links,
+    .logo_footer {
         flex-basis: 300px;
     }
 
-    .logo_footer {
-        flex-basis: 500px;
+    .logo_footer img {
+
+        width: 10vw;
     }
 
-    .logo_footer img {
-        width: 30vw;
+    .footer_links a {
+        display: block;
+        color: #f2f2f2;
+        padding: 5px;
+        text-decoration: none;
+        font-size: .9rem;
     }
+
+
+    .footer_links a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+
 
 
 
@@ -407,6 +424,7 @@
         .button {
             margin: auto;
             padding: none;
+
         }
 
         .button span {
@@ -414,6 +432,7 @@
             padding: 0;
             margin-top: 0;
             font-size: 1.2rem;
+            width: 8vw;
         }
 
         .button img {
@@ -422,7 +441,8 @@
         }
 
         .oversigt {
-/*            padding: 8vw;*/
+            padding-left: 8vw;
+            padding-right: 8vw;
             display: grid;
             grid-template-areas:
                 "header header header header"
@@ -524,5 +544,6 @@
             padding: 15px;
             font-size: 1.5rem;
         }
+
 
     }
