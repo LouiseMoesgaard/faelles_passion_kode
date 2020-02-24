@@ -107,7 +107,7 @@
     footer {
         width: 100vw;
         background-image: url(imgs/footer_bar.svg);
-        z-index: 1;
+        z-index: 9000;
         text-align: center;
         position: relative;
         background-size: 100%;
@@ -134,6 +134,7 @@
 
     /* Styling til filtrerings menu */
 
+
     .dropdown_button {
         border: 1px solid #DEDEDE;
         box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.16);
@@ -142,7 +143,7 @@
         margin: 50px auto auto auto;
         background-color: white;
         padding: 5px 0;
-        z-index: 20;
+        z-index: 2;
         position: relative;
     }
 
@@ -249,7 +250,7 @@
         height: 100vh;
         background-color: white;
         overflow: scroll;
-        z-index: 1;
+        z-index: 3;
 
     }
 
@@ -260,7 +261,7 @@
         padding-right: 3em;
         background-color: white;
         border-radius: 5px;
-        z-index: 1
+        z-index: 1;
     }
 
     #popUp img {
