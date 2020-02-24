@@ -163,17 +163,24 @@
         background-color: white;
     }
 
+
     .button {
+        display: flex;
+        flex-direction: column;
+
+        /*
         padding: 15px 25px;
         border-radius: 5px;
         display: inline-block;
         margin: 20px 3px 3px;
+*/
         outline: none;
         font-size: 0.9rem;
         background: none;
         border: none;
     }
 
+    /*
     .button span,
     .selected_item span {
         height: 9vw;
@@ -182,12 +189,15 @@
         display: inline-block;
         margin-left: 2vw;
     }
+*/
 
+    /*
     .button img,
     .selected_item img {
         width: 9vw;
 
     }
+*/
 
     .selected_item img {
         margin-left: 28px;
@@ -195,9 +205,10 @@
 
 
 
-    .button_active {
-        background-color: black;
-        color: white
+    .button_active .button img {
+        /*        background-color: black;*/
+        /*        color: black;*/
+        filter: opacity(100%);
     }
 
     .oversigt .description {
@@ -253,10 +264,14 @@
     }
 
     #popUp img {
-        margin: 0;
+        margin: 0 auto;
         padding-top: 1em;
         display: block;
         padding-bottom: 1vw;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     #popUp h3 {
@@ -367,20 +382,19 @@
         }
 
         .header_buttons img {
-            width: 5vw;
-            filter: grayscale(100%);
+            /*            width: 8vw;*/
+            filter: opacity(60%);
         }
 
         .header_buttons .button img:hover {
-            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.16);
-            filter: grayscale(0%);
+            filter: opacity(100%);
         }
 
 
 
         .button span {
-            height: 5vw;
-            line-height: 5vw;
+            /*            height: 5vw;*/
+            line-height: 1vw;
             margin-left: 1vw;
         }
 
