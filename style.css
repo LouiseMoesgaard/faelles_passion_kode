@@ -160,7 +160,7 @@ font-family: 'Noto Sans JP', ;
         width: 100%;
         height: 50vh;
         background-image: url(imgs/footer_baggrund.png);
-        background-size: 100%;
+        background-size: cover;
         background-repeat: no-repeat;
         z-index: 9000;
         text-align: center;
@@ -170,6 +170,7 @@ font-family: 'Noto Sans JP', ;
     footer .sectionwrapper {
         display: flex;
         margin: 10vw;
+        padding-top: 20vw
     }
 
     .footer_links,
