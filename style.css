@@ -78,7 +78,7 @@
 
     .logo,
     .navbar_left {
-        display: inline-block
+        display: inline-block;
     }
 
     .logo a {
@@ -116,19 +116,36 @@
 
     footer .sectionwrapper {
         display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
     }
 
-    .footer_links {
-        flex-basis: 300px;
-    }
-
+    .footer_links,
     .logo_footer {
-        flex-basis: 500px;
+        flex-basis: 300px;
+        flex-grow: 1;
+        flex-basis: 275px;
     }
 
     .logo_footer img {
-        width: 30vw;
+        width: 20vw;
     }
+
+    .footer_links a {
+        display: block;
+        color: #f2f2f2;
+        padding: 5px;
+        text-decoration: none;
+        font-size: .9rem;
+    }
+
+
+    .footer_links a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+
 
 
 
