@@ -105,30 +105,30 @@
 
 
     footer {
-        width: 100vw;
-        background-image: url(imgs/footer_bar.svg);
+        width: 100%;
+        bottom: 0;
+        background-image: url(imgs/footer_baggrund.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
         z-index: 9000;
         text-align: center;
         position: relative;
-        background-size: 100%;
+
 
     }
 
     footer .sectionwrapper {
         display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
     }
 
     .footer_links,
     .logo_footer {
         flex-basis: 300px;
-        flex-grow: 1;
-        flex-basis: 275px;
     }
 
     .logo_footer img {
-        width: 20vw;
+
+        width: 10vw;
     }
 
     .footer_links a {
@@ -524,5 +524,6 @@
             padding: 15px;
             font-size: 1.5rem;
         }
+
 
     }
