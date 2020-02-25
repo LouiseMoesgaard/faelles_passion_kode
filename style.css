@@ -1,7 +1,5 @@
     * {
         margin: 0;
-        /*        font-family: 'Lato',
-sans-serif;*/
     }
 
     img {
@@ -13,6 +11,7 @@ sans-serif;*/
         background-color: whitesmoke;
         margin: 0;
         padding: 0;
+        min-height: 100vh;
     }
 
     article {
@@ -29,6 +28,7 @@ sans-serif;*/
         pointer-events: none !important;
     }
 
+    /*************************** Generelle tekster ***************************/
 
     h2 {
         font-size: 3.5rem;
@@ -42,6 +42,19 @@ sans-serif;*/
         padding-bottom: 1vw;
         font-family: 'Nanum Brush Script';
     }
+
+    span {
+        font-family: 'Nanum Brush Script';
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-family: 'Noto Sans JP';
+
+    }
+
+    /*************************** aner ikke hvad ***************************/
+
 
     .retterPopUp h3 {
         font-size: 2.5rem;
@@ -57,16 +70,6 @@ sans-serif;*/
         text-align: center;
     }
 
-    span {
-        font-family: 'Nanum Brush Script';
-        font-size: 1.5rem;
-    }
-
-    p {
-        font-family: 'Noto Sans JP';
-
-    }
-
     .mobile {
         font-family: 'Noto Sans JP';
         font-size: 0.8rem;
@@ -77,26 +80,21 @@ sans-serif;*/
         font-family: 'Nanum Brush Script';
     }
 
-    #navbar a {
-        font-family: 'Nanum Brush Script';
-        font-size: 1.5rem;
-    }
-
 
 
     .expand {
         height: auto !important;
     }
 
-    /* Styling til navigation */
+
+    /*************************** nav ***************************/
+
     nav {
         text-align: center;
         margin-bottom: 15px;
         margin-top: 20px;
     }
 
-
-    /* styling af layout */
     #navbar {
         background-image: url(imgs/navbar_mobile.svg);
         background-size: 100%;
@@ -111,19 +109,28 @@ sans-serif;*/
         z-index: 9000;
     }
 
+    #navbar a {
+        font-family: 'Nanum Brush Script';
+        font-size: 1.5rem;
+    }
+
+    #navbar a:hover {
+        color: #EA8891;
+    }
 
     .navbar_left {
         position: absolute;
         right: 5px;
     }
 
+
     .navbar_left a {
         display: inline-block;
         color: #f2f2f2;
         padding: 5px;
         text-decoration: none;
-
     }
+
 
     .logo,
     .navbar_left {
@@ -137,26 +144,8 @@ sans-serif;*/
         display: block;
     }
 
-    #navbar a:hover {
-        color: #EA8891;
-    }
 
-
-    /** Splashvideo **/
-
-    #landingpage {
-        width: 100%;
-        padding: 0;
-        margin: 0;
-
-    }
-
-    #landingpage video {
-        width: 100%;
-    }
-
-
-    /** Footer*/
+    /*************************** Footer ***************************/
 
 
     footer {
@@ -212,11 +201,51 @@ sans-serif;*/
     }
 
 
+    /*************************** Splashvideo ***************************/
+
+    #landingpage {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+
+    }
+
+    #landingpage video {
+        width: 100%;
+    }
 
 
+    /*************************** Filtreringsmenu ***************************/
 
-    /* Styling til filtrerings menu */
+    .button {
+        padding: 15px 25px;
+        border-radius: 5px;
+        margin: 20px 3px 3px;
 
+        display: inline-block;
+        outline: none;
+        font-size: 0.9rem;
+        background: none;
+        border: none;
+    }
+
+
+    .button span,
+    .selected_item span {
+        vertical-align: bottom;
+        display: inline-block;
+        margin-left: 2vw;
+    }
+
+
+    .button img,
+    .selected_item img {
+        width: 9vw;
+    }
+
+    .selected_item img {
+        margin-left: 28px;
+    }
 
     .dropdown_button {
         border: 1px solid #DEDEDE;
@@ -248,49 +277,6 @@ sans-serif;*/
     }
 
 
-    .button {
-        padding: 15px 25px;
-        border-radius: 5px;
-        margin: 20px 3px 3px;
-
-        display: inline-block;
-        outline: none;
-        font-size: 0.9rem;
-        background: none;
-        border: none;
-    }
-
-
-    .button span,
-    .selected_item span {
-        vertical-align: bottom;
-        display: inline-block;
-        margin-left: 2vw;
-    }
-
-
-
-    .button img,
-    .selected_item img {
-        width: 9vw;
-
-    }
-
-
-    .selected_item img {
-        margin-left: 28px;
-    }
-
-
-
-    /*
-    .button_active {
-        background-color: black;
-        color: black;
-
-    }
-*/
-
     .oversigt .description {
         display: none;
         height: 9vw;
@@ -299,6 +285,13 @@ sans-serif;*/
 
     .retterPopUp .description {
         display: block;
+    }
+
+
+    .mobile {
+        font-family: 'Noto Sans JP';
+        font-size: 0.8rem;
+        text-decoration: underline;
     }
 
     .desktop {
@@ -366,19 +359,6 @@ sans-serif;*/
         /*        text-align: center;*/
     }
 
-    /*
-    #popUp div {
-        border: 1px solid black;
-        background-color: white;
-        padding: .5vw;
-        width: 3vw;
-        text-align: center;
-        cursor: pointer;
-        display: inline-block;
-        float: right;
-        border-radius: 5px;
-    }
-*/
 
     #popUp .x_button {
         position: absolute;
@@ -402,6 +382,11 @@ sans-serif;*/
 
     #frontpage_content a:hover {
         color: #E8868F
+    }
+
+    /* references.html */
+    #references {
+        margin: 7vw 0;
     }
 
 
