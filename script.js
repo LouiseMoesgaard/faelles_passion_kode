@@ -4,15 +4,22 @@
       let filter = "hosomaki";
       const detalje = document.querySelector("#popUp");
 
+
+      /* dropdownmenu i mobilversion*/
       if (window.innerWidth <= 600) {
-          document.querySelector(".dropdown_list").classList.remove("hide");
-          handleDropdown(document.querySelector(".button:first-child"))
-          /* dropdown menu i mobilversion*/
+
+          let list = document.querySelector(".dropdown_list");
+          if (list) {
+              list.classList.remove("hide");
+              handleDropdown(document.querySelector(".button:first-child"));
+          }
           let dropdown = document.querySelector(".dropdown_button");
           if (dropdown) {
               dropdown.addEventListener("click", () => {
                   document.querySelector(".dropdown_list").classList.toggle("hide");
                   let arrow = document.querySelector(".dropdown_button > span");
+
+                  /* if else sætningen skifter imellem de to klasser fa-angle-down og fa-angle-up */
                   if (arrow.classList.contains("fa-angle-down")) {
                       arrow.classList.remove("fa-angle-down");
                       arrow.classList.add("fa-angle-up");
@@ -26,22 +33,34 @@
               });
           }
       }
+
+      /*menu i webversion*/
       if (window.innerWidth >= 600) {
-          console.log("dekstop");
-          document.querySelector(".dropdown_list").classList.remove("hide");
+
+          /*fjerner hide fra dropdown_liste - Den indeholder nemlig alle menupunker, som så er stylet anderledes i webversionen*/
+          let list = document.querySelector(".dropdown_list");
+          if (list) {
+              list.classList.remove("hide");
+          }
       }
+
+      /*resize event, som skifter dynamisk imellem mobil og webversion.*/
       window.addEventListener("resize", () => {
           if (window.innerWidth <= 600) {
               document.querySelector(".dropdown_list").classList.remove("hide");
+
+              /*Får dropdown til at vælge det menupunkt, som er valgt fra webversionen*/
               handleDropdown(document.querySelector(`.button[data-filter="${filter}"]`));
           }
           if (window.innerWidth >= 600) {
               document.querySelector(".dropdown_list").classList.remove("hide");
+
+              /*Her fjerner vi hide fra alle knapper, da der potientelt set er fjernet et menupunkt igennem dropdown i mobilversionen*/
               document.querySelectorAll(".button").forEach(elm => {
                   elm.classList.remove("hide");
-              })
+              });
           }
-      })
+      });
 
       document.addEventListener("DOMContentLoaded", start);
 
@@ -59,7 +78,6 @@
 
 
       function renderMenuItems() {
-
           const container = document.querySelector(".data-container");
           const oversigtTemplate = document.querySelector("template");
 
@@ -69,15 +87,10 @@
 
               let filteredMenu = null; //filteredMenu sættes til ingenting, for at nulstille den filtrede dat efter hvert clickevent.
 
+              filteredMenu = menuData.feed.entry.filter(elm => {
+                  return elm.gsx$categori.$t == filter; //filtrerer alle elementer væk, som ikke overholder det boolske udtryk.
+              });
 
-              if (filter == "all") {
-                  filteredMenu = menuData.feed.entry;
-              } else {
-                  filteredMenu = menuData.feed.entry.filter(elm => {
-                      return elm.gsx$categori.$t == filter; //filtrerer alle elementer væk, som ikke overholder det boolske udtryk.
-
-                  });
-              }
 
               filteredMenu.forEach(food => {
                   let klon = oversigtTemplate.cloneNode(true).content; //kloner dom-element.
@@ -120,13 +133,13 @@
           let buttons = document.querySelectorAll(".button").forEach(elm => {
               elm.addEventListener("click", filtering);
 
-          })
+          });
       }
 
       function filtering() {
           document.querySelectorAll(".button").forEach(elm => {
               elm.classList.remove("button_active");
-          })
+          });
           filter = this.dataset.filter; //sætter filter-variablet til filter-atributten på knappen (derfor SKAL data-filter have samme navn som kategorierne i datasættet)
           renderMenuItems();
 
@@ -141,12 +154,18 @@
       }
 
 
-
+      /*bliver kaldt hver gang man vælger et menupunkt i mobilversion*/
       function handleDropdown(target) {
+
+          /*dropdown_btn er det element, som det valgte menupunkt skal sættes ind i*/
           let dropdown_btn = document.querySelector(".dropdown_button .selected_item");
-          let buttons = document.querySelectorAll(".button").forEach(elm => {
+
+          /*Her fjerner vi hide fra alle knapper, så et nyt menupunkt kan blive valgt*/
+          document.querySelectorAll(".button").forEach(elm => {
               elm.classList.remove("hide");
-          })
+          });
+
+          /* tager billede og tekst fra det valgte menupunkt, og sætter ind i dropdown knappen. Herefter lukkes listen igen*/
           if (dropdown_btn) {
               dropdown_btn.innerHTML = "";
               let klon = target.cloneNode(true).innerHTML;

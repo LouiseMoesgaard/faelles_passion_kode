@@ -338,6 +338,7 @@
         background-color: white;
         border-radius: 5px;
         z-index: 1;
+        position: relative;
     }
 
     #popUp img {
@@ -362,8 +363,8 @@
 
     #popUp .x_button {
         position: absolute;
-        top: 15vw;
-        left: 10vw;
+        top: 7vw;
+        left: 9vw;
         font-size: 2.5rem;
         border-style: none;
         cursor: pointer;
@@ -573,10 +574,10 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-
+            position: relative;
             max-width: 1000px;
             margin: auto;
-            margin-top: 3em;
+            margin-top: 6em;
 
             /*
 
@@ -597,8 +598,8 @@
 
         #popUp .x_button {
 
-            top: 5vw;
-            left: 3vw;
+            top: 3.5vw;
+            left: 3.5vw;
             cursor: pointer;
         }
 
