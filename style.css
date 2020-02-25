@@ -157,7 +157,6 @@ sans-serif;*/
         background-image: url(imgs/footer_baggrund.png);
         background-size: cover;
         background-repeat: no-repeat;
-        z-index: 9000;
         text-align: center;
         position: relative;
     }
@@ -624,11 +623,7 @@ sans-serif;*/
         /* footer desktop */
 
         footer {
-            background-size: cover;
-            background-repeat: no-repeat;
-            z-index: 9000;
-            text-align: center;
-            position: relative;
+            text-align: left;
         }
 
         footer .sectionwrapper {
@@ -645,7 +640,8 @@ sans-serif;*/
 
         .logo_footer {
             display: inline-block;
-            margin-right: 10vw;
+            margin-right: 17vw;
+            margin-left: 15vw;
             vertical-align: top;
         }
 
@@ -663,12 +659,12 @@ sans-serif;*/
         }
 
         .footer_section2 {
-            margin-left: 10vw;
+            margin-left: 17vw;
         }
 
 
         .footer_links p {
-            font-size: 1.5rem;
+            font-size: 2rem;
             padding: 5px;
         }
 
@@ -690,6 +686,24 @@ sans-serif;*/
         .logo a {
             padding-top: 5px;
             font-size: 1.5rem;
+        }
+
+        footer .sectionwrapper {
+            padding-top: 22vw;
+            margin: 0;
+        }
+
+        .logo_footer {
+            margin-right: 20vw;
+            margin-left: 9vw;
+        }
+
+        .footer_links p {
+            font-size: 1.5rem;
+        }
+
+        .footer_section2 {
+            margin-left: 20vw;
         }
 
     }
