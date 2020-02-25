@@ -142,13 +142,21 @@ sans-serif;*/
     }
 
 
-    #landingpage img {
+    /** Splashvideo **/
+
+    #landingpage {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+
+    }
+
+    #landingpage video {
         width: 100%;
     }
 
-    #frontpage_content img {
-        width: 100%;
-    }
+
+    /** Footer*/
 
 
     footer {
