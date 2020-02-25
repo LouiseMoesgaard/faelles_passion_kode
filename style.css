@@ -17,7 +17,10 @@ sans-serif;*/
 
     article {
         padding: 10px;
+    }
 
+    article img {
+        cursor: pointer;
     }
 
 
@@ -34,7 +37,7 @@ font-family: 'Noto Sans JP', ;
     h2 {
         font-size: 3.5rem;
         text-align: center;
-        padding: 2.5vw 0;
+        padding: 2.5vw;
         font-family: 'Nanum Brush Script';
     }
 
@@ -140,8 +143,7 @@ font-family: 'Noto Sans JP', ;
     }
 
     #navbar a:hover {
-        background-color: #ddd;
-        color: black;
+        color: #EA8891;
     }
 
 
@@ -158,7 +160,7 @@ font-family: 'Noto Sans JP', ;
         width: 100%;
         height: 50vh;
         background-image: url(imgs/footer_baggrund.png);
-        background-size: 100%;
+        background-size: cover;
         background-repeat: no-repeat;
         z-index: 9000;
         text-align: center;
@@ -168,6 +170,7 @@ font-family: 'Noto Sans JP', ;
     footer .sectionwrapper {
         display: flex;
         margin: 10vw;
+        padding-top: 20vw
     }
 
     .footer_links,
@@ -246,8 +249,6 @@ font-family: 'Noto Sans JP', ;
 
     .button span,
     .selected_item span {
-        height: 9vw;
-        line-height: 9vw;
         vertical-align: bottom;
         display: inline-block;
         margin-left: 2vw;
@@ -288,6 +289,10 @@ font-family: 'Noto Sans JP', ;
 
     .desktop {
         display: none;
+        font-family: 'Noto Sans JP';
+        font-size: 1rem;
+        text-decoration: underline;
+
     }
 
     /* styling til filtrering i menu.html */
@@ -397,11 +402,6 @@ font-family: 'Noto Sans JP', ;
             height: 7vw;
         }
 
-        .button span {
-
-            font-size: 2rem;
-        }
-
         h2 {
             font-size: 4rem;
         }
@@ -460,14 +460,13 @@ font-family: 'Noto Sans JP', ;
             display: flex;
             flex-direction: row;
             justify-content: center;
-
-
         }
 
 
         .header_buttons .button {
             display: flex;
             flex-direction: column;
+            cursor: pointer;
 
         }
 
@@ -485,15 +484,6 @@ font-family: 'Noto Sans JP', ;
         }
 
 
-
-        .button span {
-            /*            height: 5vw;*/
-            /*
-            line-height: 1vw;
-            margin-left: 1vw;
-*/
-        }
-
         .button {
             margin: auto;
             padding: none;
@@ -504,8 +494,8 @@ font-family: 'Noto Sans JP', ;
             margin: auto;
             padding: 0;
             margin-top: 0;
-            /*            font-size: 1.2rem;*/
             width: 8vw;
+            font-size: 2rem;
         }
 
         .button img {
@@ -527,8 +517,6 @@ font-family: 'Noto Sans JP', ;
         .oversigt h3 {
             grid-area: header;
 
-
-
         }
 
         .oversigt img {
@@ -543,14 +531,18 @@ font-family: 'Noto Sans JP', ;
             width: 50%;
             padding-top: 10vw;
             font-size: 1.5vw;
+            font-family: 'Noto Sans JP';
         }
 
         .desktop {
             display: block;
+            text-decoration: underline;
+            cursor: pointer;
         }
 
         .mobile {
             display: none;
+            cursor: pointer;
         }
 
         .oversigt:nth-child(2n) img {
@@ -571,8 +563,6 @@ font-family: 'Noto Sans JP', ;
         #popUp {
             background-color: rgba(0, 0, 0, 0.44);
             max-width: none;
-
-
         }
 
         .retterPopUp {
@@ -606,19 +596,35 @@ font-family: 'Noto Sans JP', ;
 
             top: 5vw;
             left: 3vw;
-
             cursor: pointer;
         }
 
         .navbar_left a {
             padding: 15px;
-            font-size: 1.5rem;
+            font-size: 2rem;
         }
 
         .logo a {
             padding: 15px;
+            font-size: 2rem;
+        }
+
+
+    }
+
+
+    /* mediaquery til tablet version */
+
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+
+        .navbar_left a {
+            padding-top: 5px;
             font-size: 1.5rem;
         }
 
+        .logo a {
+            padding-top: 5px;
+            font-size: 1.5rem;
+        }
 
     }
