@@ -82,8 +82,9 @@ font-family: 'Noto Sans JP', ;
         font-family: 'Nanum Brush Script';
     }
 
-    a {
+    #navbar a {
         font-family: 'Nanum Brush Script';
+        font-size: 1.5rem;
     }
 
 
@@ -126,7 +127,7 @@ font-family: 'Noto Sans JP', ;
         color: #f2f2f2;
         padding: 5px;
         text-decoration: none;
-        font-size: .9rem;
+
     }
 
     .logo,
@@ -139,7 +140,6 @@ font-family: 'Noto Sans JP', ;
         padding: 5px;
         text-decoration: none;
         display: block;
-        font-size: .9rem;
     }
 
     #navbar a:hover {
@@ -414,6 +414,10 @@ font-family: 'Noto Sans JP', ;
 
         .text_info h3 {
             font-size: 3.5rem;
+        }
+
+        #navbar a {
+            font-size: 2rem;
         }
 
         /*
