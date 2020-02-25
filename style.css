@@ -29,10 +29,6 @@ sans-serif;*/
         pointer-events: none !important;
     }
 
-    /*
-font-family: 'Nanum Brush Script', ;
-font-family: 'Noto Sans JP', ;
-*/
 
     h2 {
         font-size: 3.5rem;
@@ -73,7 +69,6 @@ font-family: 'Noto Sans JP', ;
 
     .mobile {
         font-family: 'Noto Sans JP';
-
         font-size: 0.8rem;
         text-decoration: underline;
     }
@@ -168,33 +163,45 @@ font-family: 'Noto Sans JP', ;
     }
 
     footer .sectionwrapper {
-        display: flex;
         margin: 10vw;
         padding-top: 20vw
     }
 
-    .footer_links,
-    .logo_footer {
-        flex-basis: 350px;
-
-    }
 
     .logo_footer img {
-        width: 5vw;
+        display: none;
+    }
+
+    .footer_links {
+        width: 100%;
+    }
+
+    .footer_section1,
+    .footer_section2 {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .footer_section1 {
+        margin-right: 30%;
     }
 
     .footer_links a {
         display: block;
-        color: #f2f2f2;
-        padding: 5px;
         text-decoration: none;
-        font-size: .9rem;
     }
 
 
-    .footer_links a:hover {
-        background-color: #ddd;
-        color: black;
+    .footer_links p {
+        font-family: 'Nanum Brush Script';
+        font-size: 1.5rem;
+        color: #f2f2f2;
+        padding: 5px;
+    }
+
+
+    .footer_links p:hover {
+        color: #EA8891;
     }
 
 
@@ -612,6 +619,60 @@ font-family: 'Noto Sans JP', ;
             padding: 15px;
             font-size: 2rem;
         }
+
+
+        /* footer desktop */
+
+        footer {
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: 9000;
+            text-align: center;
+            position: relative;
+        }
+
+        footer .sectionwrapper {
+            padding-top: 8vw;
+            margin: 0;
+        }
+
+
+        .logo_footer img {
+            display: block;
+            max-width: 15vw;
+            width: 15vw;
+        }
+
+        .logo_footer {
+            display: inline-block;
+            margin-right: 10vw;
+            vertical-align: top;
+        }
+
+
+        .footer_links {
+            display: inline-block;
+            width: auto;
+            vertical-align: top;
+        }
+
+
+
+        .footer_section1 {
+            margin-right: 0;
+        }
+
+        .footer_section2 {
+            margin-left: 10vw;
+        }
+
+
+        .footer_links p {
+            font-size: 1.5rem;
+            padding: 5px;
+        }
+
+
 
 
     }
