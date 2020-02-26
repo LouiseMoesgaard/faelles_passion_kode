@@ -66,26 +66,8 @@
         font-size: 2.5rem;
         padding-bottom: 1vw;
         font-family: 'Nanum Brush Script';
-
         text-align: center;
     }
-
-    .mobile {
-        font-family: 'Noto Sans JP';
-        font-size: 0.8rem;
-        text-decoration: underline;
-    }
-
-    .x_button {
-        font-family: 'Nanum Brush Script';
-    }
-
-
-
-    .expand {
-        height: auto !important;
-    }
-
 
     /*************************** nav ***************************/
 
@@ -103,10 +85,7 @@
         top: 0px;
         width: 100%;
         height: 13vw;
-        display: block;
-        transition: top 0.3s;
-        font-weight: bold;
-        z-index: 9000;
+        z-index: 10;
     }
 
     #navbar a {
@@ -221,7 +200,6 @@
         padding: 15px 25px;
         border-radius: 5px;
         margin: 20px 3px 3px;
-
         display: inline-block;
         outline: none;
         font-size: 0.9rem;
@@ -247,6 +225,8 @@
         margin-left: 28px;
     }
 
+
+    /* dette er vores drop down knap i mobil version*/
     .dropdown_button {
         border: 1px solid #DEDEDE;
         box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.16);
@@ -257,14 +237,18 @@
         padding: 5px 0;
         z-index: 2;
         position: relative;
+        /* Den får en relativ position, så vi bagefter kan sætte indholdet til absolut og give henholdsvis top og right på span og pil op/ned figur*/
     }
 
+    /* dette er tekst inde i drop down knappen*/
     .dropdown_button span.fa {
         position: absolute;
+        /* og det er denne værdi der henvises til oven over*/
         right: 10px;
         top: 2vw;
     }
 
+    /* selve listen der hopper up*/
     .dropdown_list {
         border: 1px solid #DEDEDE;
         box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.16);
@@ -279,22 +263,26 @@
 
     .oversigt .description {
         display: none;
+        /*fjerner descreption i oversigt over de forskellige slags sushi*/
         height: 9vw;
         overflow: hidden;
     }
 
     .retterPopUp .description {
         display: block;
+        /*viser descreption i popup for den enkelte sushi*/
     }
 
 
     .mobile {
+        /*læs mere/læs mindre styles her i mobil*/
         font-family: 'Noto Sans JP';
         font-size: 0.8rem;
         text-decoration: underline;
     }
 
     .desktop {
+        /*læs mere/læs mindre styles her i web*/
         display: none;
         font-family: 'Noto Sans JP';
         font-size: 1rem;
@@ -316,6 +304,12 @@
     .data-container img {
         padding-bottom: 1vw;
     }
+
+
+    .expand {
+        height: auto !important;
+    }
+
 
     /*styling til popup menu  */
 
@@ -358,6 +352,10 @@
 
     #popUp p {
         /*        text-align: center;*/
+    }
+
+    .x_button {
+        font-family: 'Nanum Brush Script';
     }
 
 
@@ -575,21 +573,11 @@
         }
 
         .retterPopUp {
-
-            display: flex;
-            flex-direction: column;
             justify-content: center;
             position: relative;
             max-width: 1000px;
             margin: auto;
             margin-top: 6em;
-
-            /*
-
-            margin: 0auto;
-            justify-content: center;
-*/
-
         }
 
         #popUp img {
@@ -597,7 +585,6 @@
             padding-top: 1em;
             display: block;
             padding-bottom: 1vw;
-
         }
 
 
@@ -666,10 +653,6 @@
             font-size: 2rem;
             padding: 5px;
         }
-
-
-
-
     }
 
 

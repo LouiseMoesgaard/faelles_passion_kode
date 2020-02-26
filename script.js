@@ -26,9 +26,7 @@
                   } else {
                       arrow.classList.add("fa-angle-down");
                       arrow.classList.remove("fa-angle-up");
-
                   }
-
 
               });
           }
@@ -171,6 +169,7 @@
               let klon = target.cloneNode(true).innerHTML;
               target.classList.add("hide");
               dropdown_btn.innerHTML = klon;
-              document.querySelector(".dropdown_list").classList.toggle("hide");
+              document.querySelector(".dropdown_list ").classList.toggle("
+                  hide ");
+              }
           }
-      }
