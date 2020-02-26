@@ -2,18 +2,12 @@
         margin: 0;
     }
 
-    /*
-    section {
-        max-width: 1400px;
-        justify-content: center;
-        background-color: whitesmoke;
-    }
-*/
-
     img {
         max-width: 100%;
 
     }
+
+
 
     body {
         background-color: whitesmoke;
