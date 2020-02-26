@@ -370,8 +370,12 @@
         cursor: pointer;
     }
 
+
+
     #frontpage_content .text_info {
-        padding: 2em;
+        margin-left: 2em;
+        margin-right: 2em;
+        padding-top: 3.2em;
     }
 
     #frontpage_content a {
@@ -561,6 +565,7 @@
         #frontpage_content .text_info {
             margin-left: 15em;
             margin-right: 15em;
+            padding-top: 4em;
         }
 
 
@@ -701,9 +706,9 @@
         }
 
         #frontpage_content .text_info {
-
             margin-left: 5em;
             margin-right: 5em;
+            padding-top: 2em;
         }
 
     }
