@@ -161,6 +161,7 @@
 
     .footer_section1 {
         margin-right: 30%;
+        text-align: center;
     }
 
     .footer_links a {
@@ -177,7 +178,7 @@
     }
 
 
-    .footer_links p:hover {
+    .footer_section1 p:hover {
         color: #EA8891;
     }
 
@@ -460,7 +461,7 @@
             position: static;
             z-index: initial;
             background-color: transparent;
-            margin-top: 85px;
+            margin-top: 8vw;
 
         }
 
