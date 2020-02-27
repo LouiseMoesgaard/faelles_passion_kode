@@ -7,6 +7,8 @@
 
     }
 
+
+
     body {
         background-color: whitesmoke;
         margin: 0;
@@ -159,6 +161,7 @@
 
     .footer_section1 {
         margin-right: 30%;
+        text-align: center;
     }
 
     .footer_links a {
@@ -175,7 +178,7 @@
     }
 
 
-    .footer_links p:hover {
+    .footer_section1 p:hover {
         color: #EA8891;
     }
 
